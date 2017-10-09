@@ -12,7 +12,8 @@ const GET_GITHUB_REPOS = gql`
       login
       repositories(first: 25) {
         nodes {
-          name
+          name,
+          description
         }
       }
     }

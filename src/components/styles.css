@@ -1,0 +1,25 @@
+.control-bar {
+
+}
+.control-bar-item {
+  display: inline-block;
+  padding: 20px;
+}
+.control-bar-item-value {
+  border: 2px solid black;
+  padding: 10px;
+  display: inline-block;
+  margin: 10px;
+}
+.description-item {
+  width: 200px;
+  margin: auto;
+}
+.no-results-text {
+  display: block;
+  font-size: 25px;
+}
+.user-link {
+  text-decoration: none;
+  /*color: black;*/
+}

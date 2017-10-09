@@ -1,0 +1,31 @@
+.table {
+  margin: auto;
+}
+.table-body {
+  margin: auto;
+
+  overflow-y: scroll;
+
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -ms-overflow-style: none;
+
+}
+.table-body::-webkit-scrollbar {
+  display: none;
+}
+
+.table-row {
+  display: flex;
+  border: 1px solid black;
+}
+
+.table-item {
+  flex: 1;
+  display: inline-block;
+
+  text-align: center;
+  padding: 10px;
+}
+.table-header {
+  font-weight: bold;
+}

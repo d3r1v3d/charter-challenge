@@ -12,7 +12,7 @@ const networkInterface = createNetworkInterface({
   opts: {
     headers: {
       // https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/
-      "Authorization": "Bearer YOUR_GITHUB_PERSONAL_ACCESS_TOKEN"
+      "Authorization": "Bearer b55c137cbeaf40321b6fe0005f9be37053779845"
     }
   }
 });

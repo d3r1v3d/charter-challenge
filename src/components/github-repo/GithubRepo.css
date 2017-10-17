@@ -1,0 +1,15 @@
+.repo {
+  border: 1px solid #222;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.small {
+  font-size: 14px;
+}

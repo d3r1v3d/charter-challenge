@@ -1,0 +1,16 @@
+.username {
+  border-width: 0 0 2px 0;
+  border-color: #666;
+  font-size: 22px;
+  display: block;
+  width: 100%;
+  outline: none;
+  padding-bottom: 5px;
+  padding-left: 25px;
+}
+
+.searchIcon {
+  position: absolute;
+  height: 20px;
+  margin-top: 4px;
+}

@@ -8,11 +8,19 @@ import RepoList from './RepoList';
 // https://developer.github.com/v4/
 const GET_GITHUB_REPOS = gql`
   query GetGitHubRepos {
-    user(login: "gaearon") {
+    user(login: "kenwheeler") {
       login
       repositories(first: 25) {
         nodes {
+          id
           name
+          createdAt
+          stargazers {
+            totalCount
+          }
+          watchers {
+            totalCount
+          }
         }
       }
     }
@@ -27,6 +35,7 @@ export default compose(
       user: _.property('login')(user)
     })
   }),
+
   branch(
     ({ loading }) => loading,
     renderComponent(Loading)

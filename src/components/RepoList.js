@@ -1,20 +1,18 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import RepoTable from './RepoTable';
 
 const RepoList = ({ user, repos }) => (
-  <div>
+  <main className="wrapper">
+    <section className="container">
     <p>
       <b>User:</b> {user}
     </p>
-    <ul>
-      {repos && repos.map((repo, index) => (
-        <li key={index}>
-          {repo.name}
-        </li>
-      ))}
-    </ul>
-  </div>
+    <RepoTable repos={repos} />
+    </section>
+  </main>
 );
+
 
 RepoList.propTypes = {
   user: PropTypes.string.isRequired,

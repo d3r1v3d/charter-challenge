@@ -4,7 +4,7 @@ import { ApolloProvider } from 'react-apollo';
 
 import GitHubRepos from './components/GitHubRepos';
 
-import logo from './logo.svg';
+import logo from './assets/Octocat.png';
 import './App.css';
 
 const networkInterface = createNetworkInterface({
@@ -12,7 +12,7 @@ const networkInterface = createNetworkInterface({
   opts: {
     headers: {
       // https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/
-      "Authorization": "Bearer YOUR_GITHUB_PERSONAL_ACCESS_TOKEN"
+      "Authorization": "Bearer 17e9df4c340c13b419ee7ce446fda016b8096629"
     }
   }
 });
@@ -27,7 +27,7 @@ class App extends Component {
         <div className="App">
           <div className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
-            <h2>Welcome to React</h2>
+            <div>Github Repo Tool</div>
           </div>
           <GitHubRepos />
         </div>

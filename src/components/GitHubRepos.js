@@ -8,11 +8,12 @@ import RepoList from './RepoList';
 // https://developer.github.com/v4/
 const GET_GITHUB_REPOS = gql`
   query GetGitHubRepos {
-    user(login: "gaearon") {
+    user(login: "thebho") {
       login
       repositories(first: 25) {
         nodes {
           name
+          description
         }
       }
     }

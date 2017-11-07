@@ -4,8 +4,10 @@
   "private": true,
   "dependencies": {
     "apollo-client": "^1.9.2",
+    "bootstrap": "^4.0.0-beta.2",
     "graphql-anywhere": "^3.1.0",
     "graphql-tag": "^2.4.2",
+    "jquery": "^3.2.1",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-apollo": "^1.4.15",
@@ -16,13 +18,20 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test": "mocha --reporter progress tools/testSetup.js src/**/*.test.js src/components/**/*.test.js",
+    "test:watch": "npm run test -- --watch"
   },
   "devDependencies": {
     "apollo-test-utils": "^0.3.2",
+    "enzyme": "^3.1.1",
     "eslint": "^4.7.1",
+    "expect": "^21.2.1",
     "graphql": "^0.11.3",
-    "graphql-tools": "^1.2.2"
+    "graphql-tools": "^1.2.2",
+    "jsdom": "8.5.0",
+    "mocha": "^2.4.5",
+    "nock": "8.0.0",
+    "react-addons-test-utils": "^15.0.2"
   }
 }

@@ -1,24 +1,29 @@
+
 import PropTypes from 'prop-types';
 import React from 'react';
+import RepoListRow from './RepoListRow';
 
-const RepoList = ({ user, repos }) => (
-  <div>
-    <p>
-      <b>User:</b> {user}
-    </p>
-    <ul>
-      {repos && repos.map((repo, index) => (
-        <li key={index}>
-          {repo.name}
-        </li>
+let repoRow = []
+const RepoList = ({ loading, user, loadMoreEntries }) => (
+
+  <section>
+    <div className="container">
+
+    { user.repositories.edges.map((repo, index) => (
+        <RepoListRow key={index} repo={repo.node} user={user} avatarUrl={user.avatarUrl} index={index} />
       ))}
-    </ul>
-  </div>
+
+      {(user.repositories.pageInfo.hasNextPage === true ?
+        <div className="row" style={{"padding":"30px"}}>
+          <div className="col-lg-1" style={{"float": "none","margin": "0 auto"}}><button style={{"width": "120px"}} onClick={loadMoreEntries}>Load more ({user.repositories.edges.length} of {user.repositories.totalCount})</button></div></div> : '')
+      }
+    </div>
+  </section>
 );
 
 RepoList.propTypes = {
-  user: PropTypes.string.isRequired,
-  repos: PropTypes.array.isRequired
+  user: PropTypes.object.isRequired,
+  loadMoreEntries: PropTypes.func.isRequired
 };
 
 export default RepoList;

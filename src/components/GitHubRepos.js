@@ -13,6 +13,8 @@ const GET_GITHUB_REPOS = gql`
       repositories(first: 25) {
         nodes {
           name
+          url
+          createdAt
         }
       }
     }
